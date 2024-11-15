@@ -1,0 +1,191 @@
+Exp No
+: 11                                                                                                                                          Date:                                                                                         
+ 
+ 
+EXPLORE BAGGING AND BOOSTING ENSEMBLE CLASSIFIERS FOR CLASSIFICATIONS  
+ 
+    Aim: To Explore Bagging and Boosting Ensemble Classifiers for Classifications  using Python and 
+Orange Tool  
+ 
+Algorithm:  
+1. Load Dataset: Load the Breast Cancer dataset and split it into X (features) and y (target).  
+2. Train -Test Split: Divide data into training and testing sets.  
+3. Define and Train Classifiers:  
+4. Logistic Regression: Train on the dataset and predict the test set.  
+5. Bagging (BaggingClassifier  with Decision Tree): Train using bagging, with 10 trees, and predict the test 
+set. 
+6. Boosting (AdaBoost with Decision Tree): Train using AdaBoost, with 50 estimators, and predict the test 
+set. 
+7. Voting (VotingClassifier): Combine Logistic Regression, Decision Tree, and K -Nearest Neighbors with 
+majority voting; predict the test set.  
+8. Evaluate Models: Calculate and print the accuracy for each model.  
+ 
+Python Program  
+ 
+ # Import necessary libraries  
+from sklearn.datasets import load_breast_cancer  
+from sklearn.model_selection import train_test_split  
+from sklearn.linear_model import LogisticRegression  
+from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier, VotingClassifier  
+from sklearn.tree import DecisionTreeClassifier  
+from sklearn.neighbors import KNeighborsClassifier  
+from sklearn.metrics import accuracy_score  
+ 
+# Load the Breast Cancer dataset  
+data = load_breast_cancer()  
+X = data.data  
+y = data.target  
+ 
+# Split data into training and testing sets  
+X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.3, random_state=42)  
+ 
+# 1. Simple Supervised Classifier (Logistic Regression)  
+log_reg_clf = LogisticRegression(max_iter=1000, random_state=42)  
+log_reg_clf.fit(X_train, y_train)  
+log_reg_pred = log_reg_clf.predict(X_test)  
+log_reg_accuracy = accuracy_score(y_test, log_reg_pred)  
+ 40 
+ # 2. Bagging Classifier  
+bagging_clf = BaggingClassifier(base_estimator=DecisionTreeClassifier(), n_estimators=10, random_state=42)  
+bagging_clf.fit(X_train, y_train)  
+ 
+bagging_pred = bagging_clf.predict(X_test)  
+bagging_accuracy = accuracy_score(y_test, bagging_pred)  
+ 
+# 3. Boosting Classifier (AdaBoost)  
+boosting_clf = AdaBoostClassifier(base_estimator=DecisionTreeClassifier(max_depth=1), n_estimators=50, 
+random_state=42)  
+boosting_clf.fit(X_train, y_train)  
+boosting_pred = boosting_clf.predict(X_test)  
+boosting_accuracy = accuracy_score(y_test, boosting_pred)  
+ 
+# 4. Ensemble Learner (Voting Classifier)  
+# Using Logistic Regression, Decision Tree, and K -Nearest Neighbors as base models  
+knn_clf = KNeighborsClassifier()  
+voting_clf = VotingClassifier(  
+    estimators=[  
+        ('lr', log_reg_clf),  
+        ('dt', DecisionTreeClassifier()),  
+        ('knn', knn_clf)  
+    ], 
+    voting='hard'  # 'hard' for majority voting; 'soft' would use probabilities  
+) 
+voting_clf.fit(X_train, y_train)  
+voting_pred = voting_clf.predict(X_test)  
+voting_accuracy = accuracy_score(y_test, voting_pred)  
+ 
+# Print the accuracies  
+print("Logistic Regression Accuracy:", log_reg_accuracy)  
+print("Bagging Classifier Accuracy:", bagging_accuracy)  
+print("Boosting Classifier Accuracy:", boosting_accuracy)  
+print("Voting Classifier (Ensemble) Accuracy:", voting_accuracy)  
+  
+ 
+Output:  
+ 
+    
+  
+ 
+ 
+41 
+  Performance Metrics used:  
+1. Confusion Matrix  
+The Confusion Matrix is a table used to evaluate the performance of a classification model, especially in binary 
+classification tasks. It summarizes the outcomes of predictions and compares them to the actual labels. The matrix 
+provides a more detailed loo k at what errors a model is making, breaking down predictions into four key 
+categories:  
+ 
+ 
+Components of the Confusion Matrix  
+1. True Positives (TP): Correctly predicted positive cases (e.g., the model predicted "positive," and the actual label 
+was also "positive").  
+2. False Positives (FP): Incorrectly predicted positive cases (e.g., the model predicted "positive," but the actual 
+label was "negative"). Also called a Type I Error.  
+3. True Negatives (TN): Correctly predicted negative cases (e.g., the model predicted "negative," and the actual 
+label was also "negative").  
+4. False Negatives (FN): Incorrectly predicted negative cases (e.g., the model predicted "negative," but the actual 
+label was "positive"). Also called a Type II Error.  
+ 
+ 
+2. Area Under Curve (AUC)  
+Definition: AUC, or Area Under the Curve, is a performance measurement for classification models at various 
+threshold settings. It represents the area under the ROC (Receiver Operating Characteristic) curve, which plots 
+the true positive rate (sensitivity)  against the false positive rate (1 -specificity).  
+Interpretation:  
+42 
+ AUC = 1.0: Perfect classifier.  
+AUC = 0.5: Model performs no better than random chance.  
+Usage: AUC is useful for comparing classifiers, especially in imbalanced datasets, as it reflects the model’s 
+ability to differentiate between positive and negative classes across different thresholds.  
+ 
+3.  Classification Accuracy (CA)  
+Definition: Classification accuracy is the ratio of correctly predicted observations to the total observations.  
+ 
+ 
+Higher accuracy indicates better model performance.  
+However, it can be misleading for imbalanced datasets, as it doesn’t differentiate between types of errors (false 
+positives and false negatives).      
+ 
+4. Precision  
+Definition: Precision, also known as the positive predictive value, is the ratio of correctly predicted positive 
+observations to the total predicted positive observations.  
+ 
+ 
+High precision indicates that the model has a low false positive rate, meaning that when it predicts a positive, 
+it’s likely correct.  
+Usage : Precision is especially useful in situations where false positives are more costly than false negatives 
+(e.g., in spam detection).  
+ 
+5. Recall  
+Definition: Recall, also known as sensitivity or true positive rate, is the ratio of correctly predicted positive 
+observations to all observations in the actual class.  
+ 
+High recall indicates that the model can capture most of the actual positives.  
+Usage: Recall is crucial when false negatives are costly (e.g., in disease diagnosis, where missing a positive case 
+can have severe consequences).  
+6. Matthews Correlation Coefficient (MCC)  
+Definition: The Matthews Correlation Coefficient (MCC) is a metric that measures the quality of binary 
+classifications, particularly useful for imbalanced datasets. It considers true and false positives and negatives to 
+provide a comprehensive evaluation.  
+43 
+  
+MCC = +1: Perfect prediction.  
+MCC = 0: Model performs no better than random.  
+MCC = -1: Total disagreement between prediction and ground truth.  
+Usage: MCC is a balanced measure even when classes are of very different sizes, providing a more reliable 
+evaluation than accuracy in such cases.  
+Using Orange Tool  
+Boosting: Adaboost Implementation in Orange  
+ 
+Workflow in Orange:Adaboost  
+ 
+Output: Area under Curve(AUC),Classification Accuracy(CA),Precision, Recall, MCC( Matthews 
+Correlation Coefficient ) 
+44 
+  
+ 
+Output: Confusion Matrix -Adaboost  
+ 
+    Bagging: Decision Tree  Implementation in Orange  
+ 
+ 
+Workflow in Orange: Decision Tree  
+ 
+45 
+  
+ 
+ 
+ 
+Output: Area under Curve(AUC),Classification Accuracy(CA),Precision, Recall, MCC( Matthews 
+Correlation Coefficient ) 
+ 
+ 
+Output: Confusion Matrix -Bagging -Decision Tree  
+ 
+     
+ 
+Result:  
+ 
+ 
+ 
+46

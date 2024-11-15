@@ -1,0 +1,330 @@
+Exp No
+:  1                                         EXPLORE JUPYTER NOTEBOOKS                          Date:  
+ 
+      Aim:  To explore Jupyter Notebooks  
+       
+      About Jupyter Notebooks  
+Jupyter  notebooks basically provides an interactive computational environment for developing Python based Data 
+Science applications. They are formerly known as ipython notebooks. The following are some of the features of 
+Jupyter notebooks that makes it one of the  best components of Python ML ecosystem – 
+• Jupyter notebooks can illustrate the analysis process step by step by arranging the stuff like code, images, 
+text, output etc. in a step by step manner.  
+• It helps a data scientist to document the thought process while developing the analysis process.  
+• One can also capture the result as the part of the notebook.  
+• With the help of jupyter notebooks, we can share our work with a peer also.  
+Installation and Execution  
+If you are using Anaconda distribution, then you need not install jupyter notebook separately as it is already 
+installed with it. You just need to go to Anaconda Prompt and type the following command −  
+C:\>jupyter notebook  
+After pressing enter, it will start a notebook server at  localhost:8888  of your computer. It is shown in the 
+following screen shot −  
+ 
+Now, after clicking the New  tab, you will get a list of options. Select Python 3 and it will take you to the new 
+notebook for start working in it. You will get a glimpse of it in the following screenshots −  
+6 
+  
+ 
+7 
+ On the other hand, if you are using standard Python distribution then jupyter notebook can be installed using 
+popular python package installer,  pip. 
+pip install jupyter  
+Types of Cells in Jupyter Notebook  
+The following are the three types of cells in a jupyter notebook −  
+• Code cells  − As the name suggests, we can use these cells to write code. After writing the code/content, it 
+will send it to the kernel that is associated with the notebook.  
+• Markdown cells  − We can use these cells for notating the computation process. They can contain the stuff 
+like text, images, Latex equations, HTML tags etc.  
+• Raw cells  − The text written in them is displayed as it is. These cells are basically used to add the text 
+that we do not wish to be converted by the automatic conversion mechanism of jupyter notebook.  
+For more detailed study of jupyter notebook, you can go to the link  www.tutorialspoint.com/jupyter/index.htm . 
+NumPy  
+It is another useful component that makes Python as one of the favorite languages for Data Science. It basically 
+stands for Numerical Python and consists of multidimensional array objects. By using NumPy, we can perform 
+the following important operations −  
+• Mathematical and logical operations on arrays.  
+• Fourier transformation  
+• Operations associated with linear algebra.  
+We can also see NumPy as the replacement of MatLab because NumPy is mostly used along with Scipy 
+(Scientific Python) and Mat -plotlib (plotting library).  
+Installation and Execution  
+If you are using Anaconda distribution, then no need to install NumPy separately as it is already installed with it. 
+You just need to import the package into your Python script with the help of following −  
+import numpy as np  
+On the other hand, if you are using standard Python distribution then NumPy can be installed using popular 
+python package installer, pip.  
+pip install NumPy  
+After installing NumPy, you can import it into your Python script as you did above.  
+For more detailed study of NumPy, you can go to the link  www.tutorialspoint.com/numpy/index.htm . 
+Pandas  
+It is another useful Python library that makes Python one of the favorite languages for Data Science. Pandas is 
+basically used for data manipulation, wrangling and analysis. It was developed by Wes McKinney in 2008. With 
+the help of Pandas, in data process ing we can accomplish the following five steps −  
+• Load  
+• Prepare  
+• Manipulate  
+• Model  
+• Analyze  
+Data representation in Pandas  
+The entire representation of data in Pandas is done with the help of following three data structures −  
+Series  − It is basically a one -dimensional ndarray with an axis label which means it is like a simple array with 8 
+ homogeneous data. For example, the following series is a collection of integers 1,5,10,15,24,25...  
+          
+ 
+Data frame  − It is the most useful data structure and used for almost all kind of data representation and 
+manipulation in pandas. It is basically a two -dimensional data structure which can contain heterogeneous data. 
+Generally, tabular data is represented by using data frames. For example, the following table shows th e data of 
+students having their names and roll numbers, age and gender.  
+ 
+Panel  − It is a 3 -dimensional data structure containing heterogeneous data. It is very difficult to represent the 
+panel in graphical representation, but it can be illustrated as a container of DataFrame.  
+The following table gives us the dimension and description about above mentioned data structures used in Pandas  
+ 
+Installation and Execution  
+If you are using Anaconda distribution, then no need to install  Pandas  separately as it is already installed with it. 
+You just need to import the package into your Python script with the help of following −  
+import pandas as pd  
+On the other hand, if you are using standard Python distribution then Pandas can be installed using popular 
+9 
+ python package installer,  pip. 
+pip install Pandas  
+After installing  Pandas , you can import it into your Python script as did above.  
+Scikit -learn  
+Another useful and most important python library for Data Science and machine learning in Python is  Scikit -
+learn . The following are some features of  Scikit -learn  that makes it so useful −  
+• It is built on NumPy, SciPy, and Matplotlib.  
+• It is an open source and can be reused under BSD license.  
+ 
+• It is accessible to everybody and can be reused in various contexts.  
+• Wide range of machine learning algorithms covering major areas of ML like classification, clustering, 
+regression, dimensionality reduction, model selection etc. can be implemented with the help of it.  
+Installation and Execution  
+If you are using Anaconda distribution, then no need to install Scikit -learn separately as it is already installed with 
+it. You just need to use the package into your Python script. For example, with following line of script we are 
+importing dataset of bre ast cancer patients from  Scikit -learn  − 
+from sklearn.datasets import load_breast_cancer  
+On the other hand, if you are using standard Python distribution and having NumPy and SciPy then Scikit -learn 
+can be installed using popular python package installer, pip.  
+pip install -U scikit -learn  
+After installing Scikit -learn, you can use it into your Python script as you have done above.  
+TensorFlow  
+TensorFlow is an open -source library for machine learning developed by Google. It provides support for building 
+and training deep learning models, along with tools for distributed computing and deployment. TensorFlow is a 
+powerful tool for building complex  machine learning models, particularly in the areas of computer vision and 
+natural language processing. Below is the command to install TensorFlow −  
+pip install tensorflow  
+PyTorch  
+PyTorch is another popular deep learning library in Python. Developed by Facebook, it provides a range of tools 
+for building and training neural networks, along with support for dynamic computation graphs and GPU 
+acceleration.  
+PyTorch is particularly useful for researchers and developers who need a flexible and powerful deep learning 
+framework. Below is the command to install PyTorch −  
+pip install torch  
+Keras  
+Keras  is a high -level neural network library that runs on top of TensorFlow and other lower -level frameworks. It 
+provides a simple and intuitive API for building and training deep learning models, making it an excellent choice 
+for beginners and researchers who need to quickly prototype and experiment with different models. Below is the 
+command to install Keras −  
+pip install keras  
+OpenCV  
+OpenCV is a computer vision library that provides tools for image and video processing, along with support for 
+machine learning algorithms. It is widely used in the computer vision community for tasks such as object 10 
+ detection, image segmentation, and facial recognition. Below is the command to install OpenCV −  
+pip install opencv -python  
+In addition to these libraries, there are many other tools and frameworks in the Python ecosystem for machine 
+learning, including  XGBoost, LightGBM, spaCy,  and NLTK . 
+Matplotlib  
+Matplotlib is basically a data plotting tool inspired by MATLAB, and is similar to the ggplot tool used in R.  
+Matplotlib is a popular data visualization library in Python. It's often used for creating static, interactive, and 
+animated visualizations in Python. Matplotlib allows you to generate plots, histograms, bar charts, scatter plots, 
+etc., with just a few lin es of code . 
+Program  
+1. Arithmetic Operations  
+# Addition  
+a = 5  
+b = 3  
+sum_result = a + b  
+print("Sum:", sum_result)  
+ 
+# Subtraction  
+sub_result = a - b 
+print("Difference:", sub_result)  
+ 
+# Multiplication  
+mul_result = a * b  
+print("Product:", mul_result)  
+ 
+# Division  
+div_result = a / b  
+print("Quotient:", div_result)  
+ 
+Output  
+Sum: 8  
+Difference: 2  
+Product: 15  
+Quotient: 1.6666666666666667  
+ 
+2. Lists  
+# Creating a list  
+numbers = [1, 2, 3, 4, 5]  
+ 
+# Accessing elements  
+first_element = numbers[0]  
+print( "First Element:", first_element)  
+ 
+# Appending an element  
+numbers.append(6)  
+print("List after appending:", numbers)  
+ 
+# Slicing the list  
+sub_list = numbers[1:4]  
+print("Sliced List:", sub_list)  
+Output  11 
+ First Element: 1  
+List after appending: [1, 2, 3, 4, 5, 6]  
+Sliced List: [2, 3, 4]  
+ 
+3. Using Loops  
+# Using a for loop to print numbers  
+for i in range(5):  
+    print("Number:", i)  
+ 
+Outpu t 
+Number: 0  
+Number: 1  
+Number: 2  
+Number: 3  
+Number: 4 
+ 
+4. Defining Functions  
+# Defining a function to calculate the square of a number  
+def square(num):  
+    return num * num  
+ 
+# Using the function  
+result = square(4)  
+print("Square of 4:", result)  
+Output  
+Square of 4: 16  
+ 
+5. Matplotlib  
+import matplotlib.pyplot as plt  
+# Data for plotting  
+x = [1, 2, 3, 4, 5]  
+y = [1, 4, 9, 16, 25]  
+# Creating a plot  
+plt.plot(x, y)  
+plt.xlabel('x')  
+plt.ylabel('y')  
+plt.title('Simple Plot')  
+plt.show()  
+Output:  
+ 
+12 
+  
+6. Basic String Operations  
+# String concatenation  
+greeting = "Hello"  
+name = "Alice"  
+message = greeting + ", " + name + "!"  
+print(message)  
+ 
+# String length  
+length = len(message)  
+print("Length of message:", length)  
+ 
+# String slicing  
+slice_message = message[0:5]  
+print("Sliced message:", slice_message)  
+Output  
+Hello, Alice!  
+Length of message: 13  
+Sliced message: Hello  
+ 
+7. Using Numpy  
+import numpy as np  
+# Creating a NumPy array  
+array = np.array([1, 2, 3, 4, 5])  
+ 
+# Array operations  
+array_sum = np.sum(array)  
+array_mean = np.mean(array)  
+array_squared = np.square(array)  
+ 
+print("Sum of array:", array_sum)  
+print( "Mean of array:", array_mean)  
+print("Squared array:", array_squared)  
+ 
+Output  
+Sum of array: 15  
+Mean of array: 3.0  
+Squared array: [ 1  4  9 16 25]  
+ 
+8. Using Pandas  
+import pandas as pd  
+ 
+# Sample data for demonstration  
+data = {'Name': ['John', 'Anna', 'Peter', 'Linda', 'James'],  
+        'Age': [28, 22, 35, 32, 29],  
+        'City': ['New York', 'Paris', 'Berlin', 'London', 'Toronto']}  
+ 
+# Creating DataFrame  
+df = pd.DataFrame(data)  
+ 
+# View first few rows of the DataFrame  
+print("DataFrame: \n", df)  
+ 13 
+ # Get summary statistics  
+print(" \nSummary Statistics: \n", df.describe()  
+# Filter rows where Age is greater than 30  
+print(" \nRows where Age > 30: \n", df[df['Age'] > 30])  
+ 
+Output  
+DataFrame:  
+     Name  Age      City  
+0   John   28  New York  
+1   Anna   22     Paris  
+2  Peter   35    Berlin  
+3  Linda   32    London  
+4  James   29   Toronto  
+ 
+Summary Statistics:  
+             Age 
+count   5.000000  
+mean   29.200000  
+std     4.604346  
+min    22.000000  
+25%    28.000000  
+50%    29.000000  
+75%    32.000000  
+max    35.000000  
+Rows where Age > 30:  
+     Name  Age    City  
+2  Peter   35  Berlin  
+3  Linda   32  London  
+ 
+9. Matplotlib  
+import numpy as np  
+import matplotlib.pyplot as plt  
+//This line imports the NumPy library (for numerical operations) and the Matplotlib library (for plotting).  
+plt.plot(np.arange(15), np.arange(15))  
+//np.arange(15) generates an array of integers from 0 to 14 (inclusive).  
+plt.plot(x, y) creates a line plot where x and y are arrays of values. Here, both the x -values and y -values are 
+np.arange(15).  
+plt.show()  
+ 
+Output  
+ 
+14 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Result:  
+ 
+ 
+ 
+15

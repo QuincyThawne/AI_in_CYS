@@ -1,0 +1,91 @@
+Exp No
+: 5                                                                                                                                         Date:                                                                                         
+ 
+IMPLEMENT NAÏVE BAYES SCRATCH IMPLEMENTATION USING PYTHON  
+ 
+      Aim: To implement Naïve Bayes Scratch implementation using Python  
+    
+      Algorithm  
+1. Initialize the Model:  
+• Create a class NaiveBayes with methods to fit the model on training data and make predictions on test data.  
+2. Fit the Model (Training Phase):  
+• Input: Training features X and labels y.  
+• Step 1: Identify all unique classes in y (e.g., class 0 and class 1).  
+• Step 2: For each class:  
+• Separate the samples in X that belong to this class.  
+• Calculate:  
+• The mean of each feature (column) within this class.  
+• The variance of each feature within this class.  
+• The prior probability of this class (proportion of samples in this class relative to the total number 
+of samples).  
+• Store the mean, variance, and prior probability for each class.  
+3. Define Gaussian Probability Density Function:  
+ 
+• Purpose: Calculate the probability of a feature value for a given class, assuming a Gaussian (normal) 
+distribution.  
+              
+      4. Make Predictions (Testing Phase):  
+• Input: Test samples X_test.  
+• Output: Predicted labels for each test sample in X_test.  
+• For each test sample:  
+• Step 1: For each class, calculate the posterior probability:  
+• Prior Probability: Start with the prior probability (log -transformed to avoid underflow).  
+• Class Conditional Probability: For each feature, calculate the Gaussian probability density based on 
+the feature’s mean and variance for this class. Take the log of each probability and sum them up.  
+• Add the prior and the sum of log -likelihoods to get the total posterior for the class.  
+• Step 2: Choose the class with the highest posterior probability as the predicted label for the sample.  
+      5. Output Predictions:  
+• Return the predicted class labels for all samples in X_test.  
+ 
+ 
+ 
+ 
+ 
+   
+24 
+        Program  
+      
+import numpy as np  
+ 
+class NaiveBayes:  
+    def fit(self, X, y):  
+        # Separate data by class and calculate mean, variance, and prior for each class  
+        self.classes = np.unique(y)  
+        self.stats = {  
+            cls: {  
+                "mean": X[y == cls].mean(axis=0),  
+                "var": X[y == cls].var(axis=0),  
+                "prior": len(X[y == cls]) / len(X)  
+            } 
+            for cls in self.classes  
+        } 
+ 
+    def _gaussian_density(self, mean, var, x):  
+        # Gaussian probability density function  
+        return (1 / np.sqrt(2 * np.pi * var)) * np.exp( -((x - mean) ** 2) / (2 * var))  
+ 
+    def predict(self, X):  
+        # Predict class for each sample in X  
+        y_pred = []  
+        for x in X:  
+            posteriors = []  
+            for cls, params in self.stats.items():  
+                prior = np.log(params["prior"])  
+                likelihood = np.sum(np.log(self._gaussian_density(params["mean"], params["var"], x)))  
+                posteriors.append(prior + likelihood)  
+            y_pred.append(self.classes[np.argmax(posteriors)])  
+        return np.array(y_pred)  
+ 
+# Example usage  
+X = np.array([[1, 2], [2, 3], [3, 4], [6, 5], [7, 8], [8, 9]])  
+y = np.array([0, 0, 0, 1, 1, 1])  # Labels: 0 or 1  
+ 
+model = NaiveBayes()  
+model.fit(X, y)  
+ 
+X_test = np.array([[2, 3], [7, 6]])  
+print("Predictions:", model.predict(X_test))  
+ 
+     Output:  Predictions: [0 1]  
+      
+     Result:  25

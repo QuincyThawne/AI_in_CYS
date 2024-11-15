@@ -1,0 +1,94 @@
+Exp No
+: 10                                                                                                                                      Date:                                                                                         
+ 
+DESIGN FRAUD DETECTION ALGORITHM  
+ 
+ 
+Aim: To design a fraud detection algorithm using Orange tool  
+ 
+          Introduction to Orange Tool  
+ 
+Orange is an open -source data visualization and analysis tool designed for both novice and expert users. It provides 
+a user -friendly graphical interface for data mining and machine learning, allowing users to create workflows by 
+connecting various data pro cessing and modeling components. Orange's flexibility makes it suitable for tasks such 
+as data visualization, classification, clustering, and regression, and it supports various machine learning 
+algorithms, including Random Forest, SVM, KNN, and more.  
+ 
+Orange is particularly beneficial for educational purposes, enabling students and researchers to explore machine 
+learning concepts without extensive coding knowledge. Its visual programming approach simplifies the 
+experimentation process, allowing users to  focus on the analysis and results.  
+ 
+Step -by-Step Procedure to Upload Credit Card Fraud CSV and Apply Random Forest Algorithm in 
+Orange  
+Step 1: Install Orange  
+Download and Install:  
+• Go to the Orange website and download the installer for your operating system (Windows, macOS, or 
+Linux).  
+• Follow the installation instructions to set up Orange on your computer.  
+Step 2: Launch Orange  
+Open Orange:  
+• Start the Orange application after installation.  
+Step 3: Upload the Credit Card Fraud CSV File  
+Add the File Widget:  
+• In the Orange canvas, locate the “File” widget in the left sidebar under the “Data” category.  
+• Drag and drop the File widget onto the canvas.  
+Load the CSV File:  
+• Double -click the File widget to open its settings.  
+• Click on "Browse" and navigate to the location of your Credit Card Fraud CSV file.  
+• Select the CSV file and click Open.  
+• Click OK to load the dataset.  
+Step 4: Data Preprocessing (Optional)  
+Check Data Quality:  
+• You can use the Data Table widget to visualize the loaded dataset.  
+• Add a Data Table widget to the canvas and connect it to the File widget.  
+• Double -click the Data Table widget to view the data and check for missing values or inconsistencies.  
+Preprocess Data:  
+• If necessary, you can use the Select Columns, Edit Domain, or Impute widgets to preprocess your data, 
+such as selecting relevant features or handling missing values.  37 
+ Step 5: Apply Random Forest Algorithm  
+Add the Random Forest Widget:  
+• From the left sidebar, locate the "Random Forest" widget under the “Model” category.  
+• Drag and drop the Random Forest widget onto the canvas.  
+Connect the Widgets:  
+• Connect the Data Table (or the File widget if you didn’t use a Data Table) to the Random Forest widget.  
+Set Target Variable:  
+• Double -click the Random Forest widget to open its settings.  
+• Select the target variable (e.g., "fraud" or "is_fraud") from your dataset to train the model on.  
+Step 6: Evaluate the Model with Confusion Matrix  
+Add a Test & Score Widget:  
+• Locate the "Test & Score" widget in the left sidebar under the “Evaluate” category.  
+• Drag and drop the Test & Score widget onto the canvas.  
+Connect Widgets:  
+• Connect the Random Forest widget to the Test & Score widget.  
+Configure Test & Score:  
+• Double -click the Test & Score widget to open its settings.  
+• Ensure that the Random Forest is selected as the model for evaluation.  
+• Select an evaluation method, such as Cross Validation or Train/Test Split.  
+Add a Confusion Matrix Widget:  
+• From the Evaluate category, find the Confusion Matrix widget and drag it onto the canvas.  
+• Connect the Test & Score widget to the Confusion Matrix widget.  
+Step 7: Run the Workflow  
+Execute the Workflow:  
+• Click the Run button (the small play icon) in the top right corner of the Orange interface to execute the 
+workflow.  
+View Results:  
+• After execution, you can click on the Test & Score widget to see the evaluation metrics (accuracy, 
+precision, recall, etc.).  
+• Double -click the Confusion Matrix widget to view the confusion matrix, which shows the model's 
+predictions compared to the actual labels.  
+ 
+Workflow in Orange Tool  
+38 
+  
+            
+            Output: Test and Score Widget  
+ 
+ 
+  Confusion Matrix  
+ 
+ 
+Result:  
+ 
+ 
+ 
+39

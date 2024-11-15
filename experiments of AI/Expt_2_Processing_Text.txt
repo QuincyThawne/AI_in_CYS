@@ -1,0 +1,115 @@
+Exp No
+: 2                                                                                                                                     Date:       
+ 
+TO STUDY AND EXPLORE PREPROCESSING OF TEXT (TOKENIZATION, FILTRATION, SCRIPT, 
+VALIDATION, STOP WORD REMOVAL, STEMMING)  
+                                                                                                                                                     
+ 
+Aim:  
+To study and explore Preprocessing of text (Tokenization, Filtration, Script, Validation, Stop word 
+Removal, Stemming)  
+ 
+Algorithm:  
+Algorithm: NLP Tokenization, Stopword Removal, and Stemming  
+Step 1: Import Required Libraries:  
+• Import the necessary modules from the Natural Language Toolkit (NLTK):  
+• nltk.corpus.stopwords  
+• nltk.stem.PorterStemmer  
+• nltk.tokenize.word_tokenize  
+Step 2: Download NLTK Resources (if required):  
+• Use the nltk.download() function to download the required resources:  
+• 'punkt' for tokenization.  
+• 'stopwords' for stop word removal.  
+Step 3: Input Text:  
+• Define the input text, which is a string containing sentences in natural language.  
+Step 4: Tokenization:  
+• Use the word_tokenize() function to split the input text into individual tokens (words and punctuation 
+marks).  
+Step 5: Filtration (Remove Non -Alphanumeric Tokens):  
+• Loop through the list of tokens and filter out any token that is not alphanumeric using the .isalnum() 
+method. Store the filtered tokens in a new list.  
+Step 6: Script Handling (Convert Tokens to Lowercase):  
+• Convert all tokens to lowercase by iterating over the filtered list and applying the .lower() function to 
+each token. Store the result in another list.  
+Step 7: Validation (Remove Short Words):  
+• Remove tokens that are too short (e.g., length ≤ 1). Keep only valid words by checking the length of each 
+token. Store the valid tokens in a new list.  
+Step 8: Stop Word Removal:  
+• Define a set of stop words using stopwords.words('english').   
+• Remove tokens that are stop words by iterating over the list of valid tokens and checking if the token 
+exists in the stop word set. Store the result in a new list.  
+Step 9: Stemming:  
+• Create an instance of the PorterStemmer class.  
+• Apply stemming to each token in the list of tokens without stop words. Use the stem() method to convert 
+each word to its stem (root) form. Store the stemmed tokens in a new list.  
+Step 10: Display Results:  
+• Print the original text.  16 
+ • Print the tokens at each stage of the process (after tokenization, filtration, script handling, validation, stop 
+word removal, and stemming).  
+Program  
+ 
+import nltk  
+from nltk.corpus import stopwords  
+from nltk.stem import PorterStemmer  
+from nltk.tokenize import word_tokenize  
+ 
+# Download NLTK resources if not already installed  
+nltk.download('punkt')  
+nltk.download('stopwords')  
+ 
+# Sample text  
+text = """  
+Natural language processing (NLP) is a field of artificial intelligence  
+that focuses on the interaction between computers and humans through natural language.  
+The ultimate goal of NLP is to enable computers to understand, interpret, and generate human language.  
+""" 
+ 
+# Tokenization  
+tokens = word_tokenize(text)  
+ 
+# Filtration: Remove non -alphanumeric tokens (punctuation, etc.)  
+tokens_filtr = [word for word in tokens if word.isalnum()]  
+ 
+# Script Handling: Convert to lowercase  
+tokens_script = [word.lower() for word in tokens_filtr]  
+ 
+# Validation: Check if tokens are valid words (e.g., length greater than 1)  
+tokens_valid = [word for word in tokens_script if len(word) > 1]  
+ 
+# Stop Word Removal  
+stop_words = set(stopwords.words('english'))  
+tokens_no_stopwords  = [word for word in tokens_valid if word not in stop_words]  
+ 
+# Stemming  
+stemmer = PorterStemmer()  
+stemmed_tokens = [stemmer.stem(word) for word in tokens_no_stopwords]  
+ 
+# Display results  
+print("Original Text:")  
+print(text)  
+print(" \nTokens:")  
+print(tokens)  
+print(" \nTokens after Filtration:")  17 
+ print(tokens_filtr)  
+print(" \nTokens after Script Handling:")  
+print(tokens_script)  
+print(" \nTokens after Validation:")  
+print(tokens_valid)  
+ 
+print(" \nTokens after Stop Word Removal:")  
+print(tokens_no_stopwords)  
+print(" \nStemmed Tokens:")  
+print(stemmed_tokens)  
+ 
+        Output:  
+ 
+ 
+ 
+ 
+         
+         Result:  
+ 
+ 
+          
+ 
+18

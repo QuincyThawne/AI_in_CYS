@@ -1,0 +1,149 @@
+1 
+  
+ 
+R.M.K. COLLEGE OF ENGINEERING AND TECHNOLOGY  
+(An Autonomous Institution)  
+R.S.M. Nagar, Puduvoyal – 601 206  
+ 
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING  
+(CYBER SECURITY)  
+ 
+ 
+22CY904 
+AI IN CYBER SECURITY  
+(LAB INTEGRATED)  
+ 
+LAB MANUAL  
+R202 2 
+ 
+ 
+ACADEMIC YEAR: 202 4-25 
+ODD  SEMESTER  
+ 
+ 
+ 
+ 
+ 
+B.E. COMPUTER SCIENCE AND ENGINEERING  (CYBER SECURITY)  
+ 
+ 
+2 
+ R.M.K. COLLEGE OF ENGINEERING AND TECHNOLOGY  
+(An Autonomous Institution)  
+R.S.M. Nagar, Puduvoyal – 601 206  
+ 
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING (CYBER SECUIRTY)  
+ 
+ 
+22CY 904 
+AI IN CYBER SECURITY  
+ (LAB INTEGRATED)  
+ 
+LAB MANUAL  
+R202 2 
+ 
+ 
+2024-25 EVEN  SEMESTER  
+ 
+B.E. COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)  
+ 
+ 
+ 
+ 
+ 
+ 
+Prepared by  
+ 
+Dr.Dharini N  
+ 
+Associate Professor  /CSE (CS)  Checked  by 
+ 
+Dr. S. M. Udhaya Sankar  
+ 
+Professor & Head  / CSE  
+(CS)  Approved By  
+ 
+Dr.N.Suresh Kumar , 
+ 
+Principal  
+ 
+ 
+ 
+ 
+ 
+3 
+ R.M.K. COLLEGE OF ENGINEERING AND TECHNOLOGY  
+(An Autonomous Institution)  
+R.S.M. Nagar, Puduvoyal – 601 206  
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING (CYBER SECUIRTY)  
+Vision  
+To excel and take the lead in Cyber Security education, profession and research globally with a commitment to 
+effectively address societal needs  
+ 
+Mission  
+✤ To collaborate with innovators to provide real -world, standards - based cybersecurity capabilities that 
+address business needs.  
+✤ To prepare the professionals in both academic and industrial settings capable of  solving real world 
+cybersecurity threats.  
+✤ To inculcate the students in designing and developing various projects in different areas of 
+cybersecurity, by providing a distinguished and high -quality education.  
+ 
+Program Educational Objectives  
+Graduates  of Computer  Science  and Engineering  Program  (Cyber Security)  will be able to: 
+PEO  1 : Acquire  the knowledge,  skills  and the attitude  necessary  for the     analysis  of Cyber  security.  
+PEO  2 : Apply  the cutting -edge  latest  technology  within  a professional,  legal  and ethical  frame  work  and will 
+operate  effectively  in a multidisciplinary  stream.  
+PEO  3 : Practice  continued,  self-learning to  keep  their knowledge  and skills  up to date and remain  abreast  of the 
+latest  developments  in cyber  security.  
+ 
+Program Specific Outcome s 
+       Graduates  of Computer  Science  and Engineering  (Cyber  Security)  Program  will be able  : 
+PSO 1 :  To understand, analyze, design, and develop computing solutions by applying  algorithms, web design, 
+database management, networking & cyber security.  
+PSO 2 :  To develop cyber security skills including network defense, ethical hacking, penetration testing, 
+application security and cryptography to provide real time    solutions.  
+PSO 3 : To apply standard tools, practices and strategies in cyber security for successful  career and 
+entrepreneurship  
+ 4 
+ R.M.K. COLLEGE OF ENGINEERING AND TECHNOLOGY  
+(An Autonomous Institution)  
+R.S.M. Nagar, Puduvoyal – 601 206  
+ 
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)  
+ OBJECTIVES:  
+• Learn the Concepts of AI in Cybersecurity.  
+• Understand the methods of Cybersecurity Arsenal  
+• Learn the techniques for security threats with AI  
+• Protect the sensitive information and assets.  
+• Explore  the Tools   and   Applications  to learn  about   the  AI in Cybersecurity.  
+ 
+LIST  OF EXERCISES:  
+1. Explore Jupyter notebooks.  
+2. To study and explore Preprocessing of text (Tokenization, Filtration, Script, Validation, Stop 
+word Removal, Stemming)  
+3. Explore Social media analysis  
+4. Implement a program for network access control to illustrate malware attacks.  
+5. Implement Naïve Bayes Scratch Implementation using Python.  
+6. Design a Spam detection algorithm.  
+7. Explore keystroke recognition using NLP.  
+8. Implement Real -time Facial Recognition Software powered by AI.  
+9. Explore Image Based Recognition using Software powered AI.  
+10. Design Fraud detection algorithm.  
+11. Explore Bagging and boosting Ensemble Classifiers for Classifications.  
+12. Create a fake news tracker program to collect, detect and help visualize fake news data.  
+ 
+ 
+OUTCOMES:  
+Upon completion of the course, the students will be able to:  
+CO1:  Apply AI to enhance cybersecurity using Jupyter Notebooks for algorithm development and 
+optimization.      
+CO2: Implement AI for cyber security arsenal.  
+CO3: Implement Spam Detection using ML and NLP Models  
+CO4: Protect and handle sensitive information and assets.  
+CO5: Implement AI -driven applications specifically tailored for fraud detection purposes.  
+CO6: Evaluate the effectiveness of AI -based solutions in enhancing cybersecurity measures.  
+ 
+ 
+ 
+ 
+ 5
